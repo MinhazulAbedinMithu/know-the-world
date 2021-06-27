@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Countries.css";
 import Country from "../Country/Country";
+import { Container, Row } from "react-bootstrap";
 
 const Countries = () => {
 	const [countries, setCountries] = useState([]);
@@ -12,11 +13,13 @@ const Countries = () => {
 	}, []);
 
 	return (
-		<div>
-			{countries.map((country) => (
-				<Country country={country} key={country.alpha3Code} />
-			))}
-		</div>
+		<Container>
+			<Row className="equal">
+				{countries.map((country) => (
+					<Country country={country} key={country.alpha3Code} />
+				))}
+			</Row>
+		</Container>
 	);
 };
 
