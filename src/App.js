@@ -7,6 +7,7 @@ import Countries from "./components/Countries/Countries";
 import CountryDetails from "./components/CountryDetails/CountryDetails";
 import NoMatch from "./components/NoMatch/NoMatch";
 import Header from "./components/Header/Header";
+import About from "./components/About/About";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Route path="/countries" component={Countries} />
 				<Route exact path="/" component={Countries} />
 				<Route path="/country/:countryName" component={CountryDetails} />
+				<Route path="/about" component={About} />
 				<Route path="*" component={NoMatch} />
 			</Switch>
 		</Router>
